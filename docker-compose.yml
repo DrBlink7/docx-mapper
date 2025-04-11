@@ -1,0 +1,9 @@
+volumes:
+  fill-blanks:
+services:
+  backend:
+    container_name: fill-blanks-backend
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/backend
