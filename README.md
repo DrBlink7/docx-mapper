@@ -1,4 +1,4 @@
-# Fill Blanks
+# docx-mapper
 
 This is a simple script that takes a Word document template and an Excel file with values to replace placeholders, and generates a finalized document with the data filled in.
 
