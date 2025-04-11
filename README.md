@@ -32,12 +32,12 @@ project_root/
 
 ## 🛠️ How to use
 
-1. Place your Word template (`contratto_base.docx`) and Excel file (`mappatura.xlsx`) in the root folder.
+1. Place your Word template (`base_contract.docx`) and Excel file (`mapping.xlsx`) in the root folder.
 2. Open a terminal and run:
 ```sh
 docker compose up --build
 ```
-3. The output file contratto_finale.docx will be generated in the same folder.
+3. The output file final_contract.docx will be generated in the same folder.
 
 ## ⚙️ Optional settings
 The script accepts a flag called USE_DATE_FORMAT that determines how Excel date fields are formatted:
