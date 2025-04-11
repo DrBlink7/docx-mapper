@@ -1,6 +1,10 @@
 import re
 import docx
 import openpyxl
+from datetime import datetime
+
+# Flag per controllare la formattazione delle date
+usa_date = True  # Imposta su False per formattare le date come 'gg/mm/aaaa hh:mm:ss'
 
 # Carica il file Excel e costruisci il dizionario di mapping
 wb = openpyxl.load_workbook('mappatura.xlsx')
@@ -9,7 +13,11 @@ mapping = {}
 for row in sheet.iter_rows(min_row=1, values_only=True):
     key, value = row
     if key:
-        mapping[key] = value
+        # Se il valore è una data e il flag è attivo, formatta la data
+        if usa_date and isinstance(value, datetime):
+            mapping[key] = value.strftime('%d/%m/%Y')
+        else:
+            mapping[key] = value
 
 # Carica il documento Word
 doc = docx.Document('contratto_base.docx')
