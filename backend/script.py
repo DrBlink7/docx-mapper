@@ -4,7 +4,7 @@ import openpyxl
 from datetime import datetime
 
 # Flag to control date formatting
-USE_DATE_FORMAT = True  # Set to False to format dates as 'dd/mm/yyyy hh:mm:ss'
+USE_DATETIME = True  # Set to False to format dates as 'dd/mm/yyyy hh:mm:ss'
 
 def load_mapping(file_path):
     """
@@ -18,7 +18,7 @@ def load_mapping(file_path):
             key, value = row
             if key:
                 # Format the date if the flag is active
-                if USE_DATE_FORMAT and isinstance(value, datetime):
+                if USE_DATETIME and isinstance(value, datetime):
                     mapping[key] = value.strftime('%d/%m/%Y')
                 else:
                     mapping[key] = value

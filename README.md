@@ -40,13 +40,13 @@ docker compose up --build
 3. The output file final_document.docx will be generated in the same folder.
 
 ## ⚙️ Optional settings
-The script accepts a flag called USE_DATE_FORMAT that determines how Excel date fields are formatted:
+The script accepts a flag called USE_DATETIME that determines how Excel date fields are formatted:
 - True → formats dates as dd/mm/yyyy (e.g., 01/01/1980)
 - False (default) → keeps the full datetime (e.g., 01/01/1980 00:00:00)
 
 To enable this option, edit the script.py and set:
 ```py
-USE_DATE_FORMAT = False
+USE_DATETIME = False
 ```
 
 ## 🧪 Example
