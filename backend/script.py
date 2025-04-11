@@ -69,8 +69,8 @@ def main():
     Main function to execute the script.
     """
     excel_file = 'mapping.xlsx'
-    word_file = 'base_contract.docx'
-    output_file = 'final_contract.docx'
+    word_file = 'base_document.docx'
+    output_file = 'final_document.docx'
 
     try:
         # Load mapping from Excel
